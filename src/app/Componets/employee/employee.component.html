@@ -1,4 +1,10 @@
 <app-header></app-header>
+<select name="" id="" (change)="filterMenu($event)">
+  <option value="name">name</option>
+  <option value="email">email</option>
+</select>
+<input type="text" placeholder="Serching..." class="m-5 p-2" [(ngModel)]="Serach">
+
 <table class="table">
     <thead>
       <tr>
@@ -12,7 +18,7 @@
       </tr>
     </thead>
     <tbody >
-     <tr *ngFor="let item of allEmployee;let i = index">
+     <tr *ngFor="let item of allEmployee | filter:filterCategory:Serach;let i = index">
         <td>{{i+1}}</td>
         <td>{{item.name}}</td>
         <td>{{item.position}}</td>
@@ -20,8 +26,8 @@
         <td>{{item.email}}</td>
         <td>{{item.phone}}</td>
         <td>
-            <button class="p-2 px-3 btn btn-primary m-2">Edit</button>
-            <button class="p-2 px-3 btn btn-danger m-2">Delete</button>
+            <button class="p-2 px-3 btn btn-primary m-2" (click)="updateEmployee(item.id)">Edit</button>
+            <button class="p-2 px-3 btn btn-danger m-2" (click)="employeeDelete(item.id)" >Delete</button>
         </td>
     </tr>
     </tbody>

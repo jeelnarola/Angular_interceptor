@@ -18,9 +18,13 @@ export class LoginComponent {
   toggleButtonText:string='Show Password'
   constructor(private loginService:AuthService,private router:Router) { }
   ngOnInit(): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
     this.loginFromControler()
+    this.isLoggIn()
+  }
+  isLoggIn(){
+    if(sessionStorage.getItem('token')){
+      this.router.navigate(['/']);
+    }
   }
   loginFromControler(){
     this.loginForm=new FormGroup({
@@ -28,7 +32,7 @@ export class LoginComponent {
       password:new FormControl('',[Validators.required])
     })
   }
-  
+
   login(){
     if(this.loginForm.invalid){
       this.loginInavlidbtn=true
@@ -61,7 +65,7 @@ export class LoginComponent {
     this.passwordFieldType=(this.passwordFieldType=='password')?'text':'password';
   this.toggleButtonText=(this.passwordFieldType=='password')?'Show Password':'Hide Password';
   }
-  // LOGINFROM VALIDATION 
+  // LOGINFROM VALIDATION
     get loginEmailValidation(){return this.loginForm.get('email')}
     get loginPasswordValidation(){return this.loginForm.get('password')}
 }

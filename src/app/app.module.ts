@@ -9,7 +9,12 @@ import { AddEmployeeComponent } from './Componets/add-employee/add-employee.comp
 import { RegisterComponent } from './Componets/register/register.component';
 import { LoginComponent } from './Componets/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http'
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import { UpdateEmployeeComponent } from './Componets/update-employee/update-employee.component';
+import { FilterPipe } from './Pipes/filter.pipe'
+import { FormsModule } from '@angular/forms';
+import { LoaderComponent } from './Componets/loader/loader.component';
+import { LoadingInterceptor } from './loader-interceptor/loading.interceptor';
 
 @NgModule({
   declarations: [
@@ -18,15 +23,19 @@ import {HttpClientModule} from '@angular/common/http'
     HeaderComponent,
     AddEmployeeComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    UpdateEmployeeComponent,
+    FilterPipe,
+    LoaderComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [{provide:HTTP_INTERCEPTORS, useClass:LoadingInterceptor,multi:true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

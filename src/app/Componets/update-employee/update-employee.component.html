@@ -1,0 +1,35 @@
+<app-header></app-header>
+<div class="registerDiv col-3">
+    <form class="row g-3" [formGroup]="updateEmployee" (ngSubmit)="updateEmployeeForm()">
+        <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">First Name</label>
+            <input type="email" class="form-control" id="inputEmail4" formControlName="first" required>
+          </div>
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Last Name</label>
+            <input type="email" class="form-control" id="inputEmail4" formControlName="last" required>
+        </div>
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Email</label>
+          <input type="email" class="form-control" id="inputEmail4" formControlName="email" required>
+
+        </div>
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label">Phone</label>
+          <input type="number" class="form-control" id="inputPassword4" formControlName="phone">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">position</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="Enter a position" formControlName="position">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">department</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="Enter a position" formControlName="department">
+        </div>
+
+
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">UpDate Employee</button>
+        </div>
+      </form>
+</div>

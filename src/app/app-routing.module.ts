@@ -7,6 +7,7 @@ import { RegisterComponent } from './Componets/register/register.component';
 import { LoginComponent } from './Componets/login/login.component';
 import { HeaderComponent } from './Componets/header/header.component';
 import { authGuard } from './guard/auth.guard';
+import { UpdateEmployeeComponent } from './Componets/update-employee/update-employee.component';
 
 const routes: Routes = [
   {
@@ -21,15 +22,19 @@ const routes: Routes = [
   {
     path: 'addemployee',
     component: AddEmployeeComponent,
-    
+
   },
   {
-    path:'register',  
+    path:'register',
     component:RegisterComponent
   },
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path:'update/:id',
+    component:UpdateEmployeeComponent
   }
 
 ];

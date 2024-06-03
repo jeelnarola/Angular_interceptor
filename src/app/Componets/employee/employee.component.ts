@@ -1,5 +1,6 @@
 import { EmployeeService } from 'src/app/services/employee/employee.service';
 import { Component } from '@angular/core';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-employee',
@@ -7,20 +8,39 @@ import { Component } from '@angular/core';
   styleUrls: ['./employee.component.css']
 })
 export class EmployeeComponent {
+  subscribe(arg0: (res: any) => void) {
+    throw new Error('Method not implemented.');
+  }
   allEmployee:any;
-  constructor (private EmployeeService:EmployeeService){
+  Serach:string=''
+  filterCategory:string='name'
+  constructor (private EmployeeService:EmployeeService,private router:Router){
 
   }
 
   ngOnInit(): void {
     this.getEmployee()
-    
+
   }
-  
+
   getEmployee(){
     this.EmployeeService.getEmployee().subscribe((res:any)=>{
       this.allEmployee=res
       console.log(this.allEmployee);
     })
+  }
+  employeeDelete(id:any){
+    console.log(id);
+    this.EmployeeService.deleteEmploye(id).subscribe((ele:any) =>{
+
+      this.getEmployee()
+    })
+  }
+  updateEmployee(id:string){
+    this.router.navigate([`/update/${id}`])
+  }
+  filterMenu(event:any){
+    console.log(event.target.value);
+    this.filterCategory=event.target.value
   }
 }

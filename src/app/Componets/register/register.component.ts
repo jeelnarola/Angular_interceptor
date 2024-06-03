@@ -21,7 +21,12 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
     this.registerFormControler()
     console.log(this.check);
-    
+    this.isLoggIn()
+  }
+  isLoggIn(){
+    if(sessionStorage.getItem('token')){
+      this.router.navigate(['/']);
+    }
   }
   registerFormControler():any{
     this.registerForm=new FormGroup({
@@ -57,7 +62,7 @@ export class RegisterComponent implements OnInit {
           })
         }
       })
-      
+
     }
   }
   togglePassword(){

@@ -11,22 +11,18 @@ export class HeaderComponent {
   logoutLoginToggle:boolean=false
   constructor (private AuthService:AuthService,private router:Router){
   }
- 
+
   logoutbtn:boolean=false
   logntRegister:boolean=true
   ngOnInit(): void {
-    this.isLoggIn()
-   if(sessionStorage.getItem('token')){
-     this.logoutbtn=true
-     this.logntRegister=false
-   }
-  }
-  isLoggIn(){
     if(sessionStorage.getItem('token')){
-      this.router.navigate(['/']);
+      this.logoutbtn=true
+      this.logntRegister=false
     }
+    // this.isLoggIn()
   }
   
+
   registerRouter():void{
     this.router.navigate(['/register']);
   }
