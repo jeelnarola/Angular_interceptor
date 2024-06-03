@@ -1,0 +1,240 @@
+{
+  "register": [
+    {
+      "id": "316a",
+      "email": "narola@gmail.com",
+      "password": "123456",
+      "gender": "male"
+    },
+    {
+      "id": "ae47",
+      "email": "jayhind@gmail.com",
+      "password": "123445",
+      "gender": "male"
+    },
+    {
+      "id": "de03",
+      "email": "vivek@gmail.com",
+      "password": "Vivek12345",
+      "gender": "male"
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "position": "Software Engineer",
+      "department": "Engineering",
+      "email": "john.doe@example.com",
+      "phone": "+1234567890"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "position": "Marketing Manager",
+      "department": "Marketing",
+      "email": "jane.smith@example.com",
+      "phone": "+1987654321"
+    },
+    {
+      "id": 3,
+      "name": "Michael Johnson",
+      "position": "Financial Analyst",
+      "department": "Finance",
+      "email": "michael.johnson@example.com",
+      "phone": "+1122334455"
+    },
+    {
+      "id": 4,
+      "name": "Emily Williams",
+      "position": "Human Resources Coordinator",
+      "department": "Human Resources",
+      "email": "emily.williams@example.com",
+      "phone": "+1445566778"
+    },
+    {
+      "id": 5,
+      "name": "Alex Brown",
+      "position": "Sales Representative",
+      "department": "Sales",
+      "email": "alex.brown@example.com",
+      "phone": "+1555666777"
+    },
+    {
+      "id": 6,
+      "name": "Jessica Taylor",
+      "position": "Project Manager",
+      "department": "Project Management",
+      "email": "jessica.taylor@example.com",
+      "phone": "+1666777888"
+    },
+    {
+      "id": 7,
+      "name": "William Martinez",
+      "position": "Customer Service Representative",
+      "department": "Customer Service",
+      "email": "william.martinez@example.com",
+      "phone": "+1777888999"
+    },
+    {
+      "id": 8,
+      "name": "Sophia Anderson",
+      "position": "Accountant",
+      "department": "Finance",
+      "email": "sophia.anderson@example.com",
+      "phone": "+1888999000"
+    },
+    {
+      "id": 9,
+      "name": "Daniel Wilson",
+      "position": "Operations Manager",
+      "department": "Operations",
+      "email": "daniel.wilson@example.com",
+      "phone": "+1999000111"
+    },
+    {
+      "id": 10,
+      "name": "Olivia Garcia",
+      "position": "Graphic Designer",
+      "department": "Marketing",
+      "email": "olivia.garcia@example.com",
+      "phone": "+1099887766"
+    },
+    {
+      "id": 11,
+      "name": "Ethan Lopez",
+      "position": "Software Developer",
+      "department": "Engineering",
+      "email": "ethan.lopez@example.com",
+      "phone": "+1998877665"
+    },
+    {
+      "id": 12,
+      "name": "Ava Nguyen",
+      "position": "Content Writer",
+      "department": "Marketing",
+      "email": "ava.nguyen@example.com",
+      "phone": "+1887665544"
+    },
+    {
+      "id": 13,
+      "name": "Liam Martinez",
+      "position": "Customer Support Specialist",
+      "department": "Customer Service",
+      "email": "liam.martinez@example.com",
+      "phone": "+1776554433"
+    },
+    {
+      "id": 14,
+      "name": "Mia Brown",
+      "position": "Financial Advisor",
+      "department": "Finance",
+      "email": "mia.brown@example.com",
+      "phone": "+1665443322"
+    },
+    {
+      "id": 15,
+      "name": "Noah Wilson",
+      "position": "Operations Analyst",
+      "department": "Operations",
+      "email": "noah.wilson@example.com",
+      "phone": "+1554332211"
+    },
+    {
+      "id": 16,
+      "name": "Emma Lee",
+      "position": "Marketing Assistant",
+      "department": "Marketing",
+      "email": "emma.lee@example.com",
+      "phone": "+1443221100"
+    },
+    {
+      "id": 17,
+      "name": "James Rodriguez",
+      "position": "Sales Manager",
+      "department": "Sales",
+      "email": "james.rodriguez@example.com",
+      "phone": "+1332110099"
+    },
+    {
+      "id": 18,
+      "name": "Ava Hernandez",
+      "position": "HR Assistant",
+      "department": "Human Resources",
+      "email": "ava.hernandez@example.com",
+      "phone": "+1221009988"
+    },
+    {
+      "id": 19,
+      "name": "Logan Gonzalez",
+      "position": "IT Support Specialist",
+      "department": "Engineering",
+      "email": "logan.gonzalez@example.com",
+      "phone": "+1110099887"
+    },
+    {
+      "id": 20,
+      "name": "Isabella Perez",
+      "position": "Financial Manager",
+      "department": "Finance",
+      "email": "isabella.perez@example.com",
+      "phone": "+1009988776"
+    },
+    {
+      "id": 21,
+      "name": "David Clark",
+      "position": "Software Engineer",
+      "department": "Engineering",
+      "email": "david.clark@example.com",
+      "phone": "+1998877665"
+    },
+    {
+      "id": 22,
+      "name": "Sophie Turner",
+      "position": "Marketing Coordinator",
+      "department": "Marketing",
+      "email": "sophie.turner@example.com",
+      "phone": "+1887665544"
+    },
+    {
+      "id": 23,
+      "name": "Ryan Taylor",
+      "position": "Customer Support Specialist",
+      "department": "Customer Service",
+      "email": "ryan.taylor@example.com",
+      "phone": "+1776554433"
+    },
+    {
+      "id": 24,
+      "name": "Jacob White",
+      "position": "Financial Advisor",
+      "department": "Finance",
+      "email": "jacob.white@example.com",
+      "phone": "+1665443322"
+    },
+    {
+      "id": 25,
+      "name": "Lily Adams",
+      "position": "Operations Analyst",
+      "department": "Operations",
+      "email": "lily.adams@example.com",
+      "phone": "+1554332211"
+    },
+    {
+      "id": 26,
+      "name": "Lucas Baker",
+      "position": "Marketing Assistant",
+      "department": "Marketing",
+      "email": "lucas.baker@example.com",
+      "phone": "+1443221100"
+    },
+    {
+      "id": 27,
+      "name": "jeel narola",
+      "position": "Angular.Js",
+      "department": "Frontend Development",
+      "email": "jeel@gmail.com",
+      "phone": 8980672208
+    }
+  ]
+}

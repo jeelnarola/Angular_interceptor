@@ -1,0 +1,62 @@
+<app-header></app-header>
+<div class="registerDiv col-3">
+    <form class="row g-3" [formGroup]="employeAddForm" (ngSubmit)="addEmployee()">
+        <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">First Name</label>
+            <input type="email" class="form-control" id="inputEmail4" formControlName="first" required>
+            <ng-container *ngIf="employeeFirst?.invalid && employeeBtn ||  employeeFirst?.touched">
+              <span style="color: red;" *ngIf="employeeFirst?.errors?.['required']">First Name Required...</span>
+            </ng-container>
+            
+          </div>
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Last Name</label>
+            <input type="email" class="form-control" id="inputEmail4" formControlName="last" required>
+            <ng-container *ngIf="employeeLast?.invalid && employeeBtn ||employeeLast?.touched">
+              <span style="color: red;" *ngIf="employeeLast?.errors?.['required']">Last Name Required...</span>
+            </ng-container>
+          </div>
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Email</label>
+          <input type="email" class="form-control" id="inputEmail4" formControlName="email" required>
+          <ng-container *ngIf="employeeemail?.invalid && employeeBtn ||employeeemail?.touched">
+            <span style="color: red;" *ngIf="employeeemail?.errors?.['required']">Email Name Required...</span>
+          </ng-container>
+        </div>
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label">Phone</label>
+          <input type="number" class="form-control" id="inputPassword4" formControlName="phone">
+          <ng-container *ngIf="employeePhone?.invalid && employeeBtn ||employeePhone?.touched">
+            <span style="color: red;" *ngIf="employeePhone?.errors?.['required']">Phone Number Required...</span>
+            <span style="color: red;" *ngIf="employeePhone?.errors?.['minlength']">Phone Number minimmum length 10...</span>
+            <span style="color: red;" *ngIf="employeePhone?.errors?.['maxlength']">Phone Number  maxmimmum length 10...</span>
+          </ng-container>
+        </div>
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">position</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="Enter a position" formControlName="position">
+          <ng-container *ngIf="employeePosition?.invalid && employeeBtn ||employeePosition?.touched">
+            <span style="color: red;" *ngIf="employeePosition?.errors?.['required']">Position Name Required...</span>
+          </ng-container>
+        </div>
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">department</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="Enter a position" formControlName="department">
+          <ng-container *ngIf="employeeDepart?.invalid &&  employeeBtn ||employeeDepart?.touched">
+            <span style="color: red;" *ngIf="employeeDepart?.errors?.['required']">Department Name Required...</span>
+          </ng-container>
+        </div>
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+              Check me out
+            </label>
+          </div>
+        </div>
+        
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Sign in</button>
+        </div>
+      </form>
+</div>

@@ -1,0 +1,23 @@
+<header>
+    <div class="container">
+       <div class="d-flex justify-content-between align-items-center">
+        <div class="logo">
+            <h1>Angular</h1>
+        </div>
+        <nav>
+            <ul class="d-flex">
+                <li class="px-3 py-3"><a routerLink="/employee">Employee</a></li>
+                <li class="px-3 py-3"><a routerLink="/addemployee">AddEmployee</a></li>
+            </ul>
+        </nav>
+        <div class="btn">
+            <ng-container *ngIf="logntRegister">
+                <button class="btn btn-primary mx-2" (click)="registerRouter()">Register</button>
+                <button class="btn btn-primary mx-2" (click)="loginRouter()">Login</button>
+            </ng-container>
+            
+            <button class="btn btn-danger mx-2" (click)="logOut()" *ngIf="logoutbtn">LoguOut</button>
+        </div>
+       </div>
+    </div>
+</header>

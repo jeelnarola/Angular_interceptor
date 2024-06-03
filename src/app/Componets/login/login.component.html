@@ -1,0 +1,24 @@
+<!-- <router-outlet></router-outlet> --><app-header></app-header>
+<form action="" [formGroup]="loginForm" (ngSubmit)="login()" class="col-3">
+    <h4 class="text-center pb-5 pt-3">Register</h4>
+    <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Email </label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Email" formControlName="email" required>
+        <ng-container *ngIf="loginEmailValidation?.invalid && loginInavlidbtn || loginEmailValidation?.touched">
+            <span class="text-danger px-3" *ngIf="loginEmailValidation?.errors?.['required']">Email required...</span>
+        </ng-container>
+        
+      </div>
+    <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Password</label>
+        <input type="{{passwordFieldType}}" class="form-control" id="formGroupExampleInput2" placeholder="Password" formControlName="password" required>
+       <div class="d-flex ">
+        <input type="checkbox" (click)="toggleButton()"><p class="pt-3 ps-2">{{toggleButtonText}}</p>
+       </div>
+        <ng-container *ngIf="loginPasswordValidation?.invalid && loginInavlidbtn || loginPasswordValidation?.touched">
+            <span class="text-danger px-3" *ngIf="loginPasswordValidation?.errors?.['required']">Password required...</span>
+        </ng-container>
+    </div>
+    <p></p>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
