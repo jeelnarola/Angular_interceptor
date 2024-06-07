@@ -19,8 +19,7 @@ export class RegisterComponent implements OnInit {
 
   }
   ngOnInit(): void {
-    this.registerFormControler()
-    console.log(this.check);
+    this.registerFormControler() 
     this.isLoggIn()
   }
   isLoggIn(){

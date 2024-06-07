@@ -9,6 +9,12 @@ export class EmployeeService {
   employeeURL:string='http://localhost:3000'
   constructor(private _employee:HttpClient) { }
   loader=new BehaviorSubject<Boolean>(false)
+  show(){
+    this.loader.next(true)
+  }
+  hide(){
+    this.loader.next(false)
+  }
   postEmployee(data:any){
     return this._employee.post(`${this.employeeURL}/employees`,data)
   }
@@ -22,9 +28,6 @@ export class EmployeeService {
     return this._employee.delete(`${this.employeeURL}/employees/${id}`)
   }
   updateEmployee(id:string,data:any){
-    console.log(id);
-
     return this._employee.put(`${this.employeeURL}/employees/${id}`,data)
-
   }
 }

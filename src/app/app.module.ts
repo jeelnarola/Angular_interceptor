@@ -15,7 +15,8 @@ import { FilterPipe } from './Pipes/filter.pipe'
 import { FormsModule } from '@angular/forms';
 import { LoaderComponent } from './Componets/loader/loader.component';
 import { LoadingInterceptor } from './loader-interceptor/loading.interceptor';
-
+import { AngularToastifyModule, ToastService } from 'angular-toastify';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +34,9 @@ import { LoadingInterceptor } from './loader-interceptor/loading.interceptor';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AngularToastifyModule,
+    MatProgressSpinnerModule,
   ],
   providers: [{provide:HTTP_INTERCEPTORS, useClass:LoadingInterceptor,multi:true}],
   bootstrap: [AppComponent]

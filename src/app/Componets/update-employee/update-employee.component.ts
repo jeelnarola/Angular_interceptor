@@ -13,8 +13,7 @@ export class UpdateEmployeeComponent {
   constructor(private employeeService:EmployeeService,private ActiveRout:ActivatedRoute){
 
   }
-  ngOnInit():void{
-    console.log(this.ActiveRout.snapshot.paramMap.get('id'));
+  ngOnInit():void{ 
     this.updateEmployee=new FormGroup({
       first: new FormControl(''),
       last:new FormControl(''),
@@ -39,11 +38,9 @@ export class UpdateEmployeeComponent {
    })
   }
   EmployeesShow(){
-    this.employeeService.getEmployeeUpdate(this.ActiveRout.snapshot.paramMap.get('id')).subscribe((ele:any)=>{
-      console.log(ele);
+    this.employeeService.getEmployeeUpdate(this.ActiveRout.snapshot.paramMap.get('id')).subscribe((ele:any)=>{ 
       let firstname=ele.name.split(" ")[0]
-      let lastname=ele.name.split(" ")[1]
-      console.log(ele.phone);
+      let lastname=ele.name.split(" ")[1] 
 
       this.updateEmployee.patchValue({
         first:firstname,

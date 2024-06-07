@@ -25,12 +25,10 @@ export class EmployeeComponent {
 
   getEmployee(){
     this.EmployeeService.getEmployee().subscribe((res:any)=>{
-      this.allEmployee=res
-      console.log(this.allEmployee);
+      this.allEmployee=res 
     })
   }
-  employeeDelete(id:any){
-    console.log(id);
+  employeeDelete(id:any){ 
     this.EmployeeService.deleteEmploye(id).subscribe((ele:any) =>{
 
       this.getEmployee()
@@ -39,8 +37,7 @@ export class EmployeeComponent {
   updateEmployee(id:string){
     this.router.navigate([`/update/${id}`])
   }
-  filterMenu(event:any){
-    console.log(event.target.value);
+  filterMenu(event:any){ 
     this.filterCategory=event.target.value
   }
 }

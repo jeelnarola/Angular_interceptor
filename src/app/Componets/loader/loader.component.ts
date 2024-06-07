@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BehaviorSubject, Subject } from 'rxjs';
 import { EmployeeService } from 'src/app/services/employee/employee.service';
 
 @Component({
@@ -10,8 +11,8 @@ export class LoaderComponent {
   loader:any;
   constructor(private employee:EmployeeService){
     this.employee.loader.subscribe(res=>{
-      console.log("res",res);
       this.loader=res
     })
   }
+  isLoading = new BehaviorSubject<boolean>(true);
 }

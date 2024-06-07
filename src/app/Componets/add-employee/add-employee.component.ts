@@ -16,10 +16,9 @@ export class AddEmployeeComponent {
 
   }
   ngOnInit(): void {
-    console.log(this.employeeService.getEmployee().subscribe((res:any)  =>{
+   this.employeeService.getEmployee().subscribe((res:any)  =>{
       this.id=res.length+1
-      
-    }))
+    })
     
     this.employeeAddcontrole()
   }
@@ -59,8 +58,6 @@ export class AddEmployeeComponent {
         email: this.employeAddForm.value.email,
         phone:this.employeAddForm.value.phone
       }).subscribe((res)=>{
-        console.log(res);
-        
         alert('Employee Add Successfully...')
         this.employeAddForm.reset()
       })
